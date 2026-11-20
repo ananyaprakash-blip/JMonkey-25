@@ -436,6 +436,24 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:30}
 
   /* ---------- 8-bit sound effects ---------- */
   let sfxCtx = null, soundOn = true;
+  // iPhone fix: let sounds play even when the silent switch is on
+  try{ if(navigator.audioSession) navigator.audioSession.type = 'playback'; }catch(e){}
+  const keepAlive = new Audio('data:audio/wav;base64,UklGRsQPAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YaAPAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA');
+  keepAlive.loop = true; keepAlive.setAttribute('playsinline', ''); keepAlive.preload = 'auto';
+  let unlocked = false;
+  function unlockAudio(){
+    if(!soundOn) return;
+    try{
+      sfxCtx = sfxCtx || new (window.AudioContext || window.webkitAudioContext)();
+      if(sfxCtx.state !== 'running') sfxCtx.resume();
+      if(!unlocked){ // play one silent sample inside the tap so the phone allows sound
+        const b = sfxCtx.createBuffer(1, 1, 22050), s = sfxCtx.createBufferSource();
+        s.buffer = b; s.connect(sfxCtx.destination); s.start(0); unlocked = true;
+      }
+      const p = keepAlive.play(); if(p && p.catch) p.catch(() => {});
+    }catch(e){}
+  }
+  ['pointerdown','touchend','click','keydown'].forEach(ev => document.addEventListener(ev, unlockAudio, {capture:true, passive:true}));
   function tone(freq, start, dur, type = 'square', vol = .06){
     if(!soundOn) return;
     try{
@@ -482,7 +500,7 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:30}
     cheat(){ [392,494,587,784,988,1175,1568].forEach((f, i) => tone(f, i * .06, .12, 'sawtooth', .04)); }
   };
   $('soundBtn').addEventListener('click', () => {
-    soundOn = !soundOn; if(!soundOn) stopSong(); $('soundBtn').textContent = soundOn ? '🔊' : '🔇';
+    soundOn = !soundOn; if(!soundOn){ stopSong(); keepAlive.pause(); } else unlockAudio(); $('soundBtn').textContent = soundOn ? '🔊' : '🔇';
     $('soundBtn').setAttribute('aria-label', soundOn ? 'Sound on' : 'Sound off'); if(soundOn) sfx.blip();
   });
 
@@ -637,6 +655,7 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:30}
   const status = $('status'), fill = $('meterFill');
   const BLOW_THRESHOLD = 0.35, BLOW_SECONDS = 0.5;
 
+  let micCtx = null, micSrc = null, micStream = null, silentSince = 0;
   async function startMic(){
     if(narrow) goTo('cake');
     if(micOn) return;
@@ -644,22 +663,26 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:30}
       status.textContent = 'The mic only works when the card is hosted online (https). Hold the button or spacebar to blow!';
       return;
     }
+    // create + resume the audio engine right away, while we still have the click (Safari needs this)
+    try{ micCtx = micCtx || new (window.AudioContext || window.webkitAudioContext)(); micCtx.resume(); }catch(e){}
+    status.textContent = 'asking for the mic… click “Allow” 🎤';
     try{
-      const stream = await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}});
-      const ctx = new (window.AudioContext || window.webkitAudioContext)();
-      await ctx.resume();
-      const src = ctx.createMediaStreamSource(stream);
-      const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 1200; // blowing is mostly low rumble
-      analyser = ctx.createAnalyser(); analyser.fftSize = 1024;
-      src.connect(lp); lp.connect(analyser);
+      micStream = await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:true}});
+      if(micCtx.state === 'suspended') await micCtx.resume();
+      micSrc = micCtx.createMediaStreamSource(micStream);
+      const lp = micCtx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 1500; // blowing is mostly low rumble
+      analyser = micCtx.createAnalyser(); analyser.fftSize = 1024;
+      micSrc.connect(lp); lp.connect(analyser);
       buf = new Float32Array(analyser.fftSize);
-      micOn = true;
+      micOn = true; floor = 0.004; silentSince = performance.now();
       $('micBtn').textContent = '🎤 Mic on'; $('micBtn').disabled = true;
-      status.textContent = 'mic is listening… blow on it! 🌬️';
+      status.textContent = 'mic is listening… blow on it! watch the BLOW POWER bar 🌬️';
       $('cakeSub').textContent = 'blow into your mic';
       sfx.blip();
     }catch(err){
-      status.textContent = 'Mic is blocked. Hold the button or spacebar to blow instead!';
+      status.textContent = (err && err.name === 'NotAllowedError')
+        ? 'Mic permission is blocked. Click the 🔒 next to the web address, allow Microphone, and reload. Or just hold the orange button!'
+        : 'Couldn’t find a mic. Hold the orange button or spacebar to blow instead!';
     }
   }
   $('micBtn').addEventListener('click', startMic);
@@ -680,12 +703,19 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:30}
 
   function micStrength(){
     if(!micOn) return 0;
+    if(micCtx.state === 'suspended') micCtx.resume();
     analyser.getFloatTimeDomainData(buf);
     let sum = 0; for(let i = 0; i < buf.length; i++) sum += buf[i] * buf[i];
     const rms = Math.sqrt(sum / buf.length);
-    // slowly track the room's background noise so only real blowing counts
-    if(rms < floor * 1.6) floor = floor * 0.98 + rms * 0.02; else floor = floor * 0.999 + rms * 0.001;
-    return Math.max(0, Math.min(1, (rms - floor * 2.2) / 0.12));
+    // if the mic sends pure silence for a while, say so
+    if(rms > 1e-5) silentSince = performance.now();
+    else if(performance.now() - silentSince > 4000 && !status.dataset.silent){
+      status.dataset.silent = 1; status.textContent = 'The mic isn’t sending any sound. Check your computer’s mic settings, or hold the orange button!';
+    }
+    // slowly learn the room's background noise so only real blowing counts
+    if(rms < floor * 1.5) floor = floor * 0.97 + rms * 0.03; else floor = floor * 0.9995 + rms * 0.0005;
+    floor = Math.max(floor, 0.0015);
+    return Math.max(0, Math.min(1, (rms - floor * 1.8) / 0.03));
   }
 
   function tick(now){
